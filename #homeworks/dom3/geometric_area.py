@@ -6,6 +6,7 @@ print('4. trójkąt')
 print('5. trapez')
 user_geometric = int(input("Podaj numer figury której pole powierzchni chcesz obliczyć: "))
 
+
 if user_geometric == 1:
     print('Olbiczamy pole kwadratu.' )
     a = int(input('Podaj długość boku kwadratu w cm: '))
@@ -32,10 +33,10 @@ elif user_geometric == 5:
     print('Pole Twojego trapezu to ' + str(((h + i)*j)/2) + ' cm2')
 elif user_geometric != range(1,5):
     print("!!PODAŁEŚ WARTOŚĆ SPOZA ZBIORU!!")
-    print('Program umożliwia obliczanie powieszeni następujących figur geometrycznych:')
-    print('1. kwadrat')
-    print('2. prostokąt')
-    print('3. koło')
-    print('4. trójkąt')
-    print('5. trapez')
-    user_geometric = int(input("Podaj numer figury której pole powierzchni chcesz obliczyć: "))
+    # print('Program umożliwia obliczanie powieszeni następujących figur geometrycznych:')
+    # print('1. kwadrat')
+    # print('2. prostokąt')
+    # print('3. koło')
+    # print('4. trójkąt')
+    # print('5. trapez')
+    # user_geometric = int(input("Podaj numer figury której pole powierzchni chcesz obliczyć: "))
