@@ -1,0 +1,41 @@
+print('Program umożliwia obliczanie powieszeni następujących figur geometrycznych:')
+print('1. kwadrat')
+print('2. prostokąt')
+print('3. koło')
+print('4. trójkąt')
+print('5. trapez')
+user_geometric = int(input("Podaj numer figury której pole powierzchni chcesz obliczyć: "))
+
+if user_geometric == 1:
+    print('Olbiczamy pole kwadratu.' )
+    a = int(input('Podaj długość boku kwadratu w cm: '))
+    print ('Pole Twojego kwadratu to ' + str(a*a) + ' cm2')
+elif user_geometric == 2:
+    print('Olbiczamy pole prostokąta')
+    b = int(input('Podaj długość boku "a" prostokoąta w cm: '))
+    c = int(input('Podaj długość boku "b" prostokoąta w cm: '))
+    print ('Pole Twojego prostokąta to ' + str(b*c) + ' cm2')
+elif user_geometric == 3:
+    print('Olbiczamy pole koła')
+    e = int(input('Podaj długość promienia koła w cm: '))
+    print ('Pole Twojego koła to ' + str(3.141592*e**2) + ' cm2')
+elif user_geometric == 4:
+    print('Olbiczamy pole trójkąta')
+    f = int(input('Podaj długość podstawy trójkąta w cm: '))
+    g = int(input('Podaj wysokość trójkąta w cm: '))
+    print('Pole Twojego trojkąta to ' + str((f * g)/2) + ' cm2')
+elif user_geometric == 5:
+    print('Olbiczamy pole trapezu')
+    h = int(input('Podaj długość podstawy "a" trapezu w cm: '))
+    i = int(input('Podaj długość podstawy "b" trapezu w cm: '))
+    j = int(input('Podaj wysokość trapezu w cm: '))
+    print('Pole Twojego trapezu to ' + str(((h + i)*j)/2) + ' cm2')
+elif user_geometric != range(1,5):
+    print("!!PODAŁEŚ WARTOŚĆ SPOZA ZBIORU!!")
+    print('Program umożliwia obliczanie powieszeni następujących figur geometrycznych:')
+    print('1. kwadrat')
+    print('2. prostokąt')
+    print('3. koło')
+    print('4. trójkąt')
+    print('5. trapez')
+    user_geometric = int(input("Podaj numer figury której pole powierzchni chcesz obliczyć: "))
