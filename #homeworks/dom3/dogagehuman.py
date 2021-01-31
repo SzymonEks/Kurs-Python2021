@@ -1,4 +1,4 @@
-human_age = int(input("Podaj wiek w latach ludzkich: "))
+human_age = float(input("Podaj wiek w latach ludzkich: "))
 
 if human_age == 1:
     print("Wiek wiek w latach psich to 10.5")
