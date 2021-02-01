@@ -24,29 +24,21 @@ while True:
     if (len(password) < 8):
         flag = -1
         print("hasło za krótkie - Minimalna długość hasła 8 znaków")
-        break
-    elif (len(password) > 64):
+    if (len(password) > 64):
         flag = -1
         print("hasło za długie - Maksymalna długość hasła 64 znaki")
-        break
-    elif not re.search("[a-z]", password):
+    if not re.search("[a-z]", password):
         flag = -1
         print("Hasło nie zawiera coanjmiej jednej małej litery")
-        break
-    elif not re.search("[A-Z]", password):
+    if not re.search("[A-Z]", password):
         flag = -1
         print("Hasło nie zawiera coanjmiej jednej wielkiej litery")
-        break
-    elif not re.search("[0-9]", password):
+    if not re.search("[0-9]", password):
         flag = -1
         print("Hasło nie zawiera coanjmiej jednej cyfry")
-        break
-    elif not re.search("[-@#]", password):
+    if not re.search("[-@#]", password):
         flag = -1
         print("Hasło nie zawiera znaku specjlanego")
-        break
-    elif re.search("\s", password):
-        flag = -1
         break
     else:
         flag = 0
