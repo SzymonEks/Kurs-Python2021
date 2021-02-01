@@ -12,7 +12,7 @@ import re
 
 print('Program sprawdza poprawność hasła względem poniższym kryteriów')
 print('a. Conajmniej jedna mała litera')
-print ('b. Conajmniej jedna cyfra')
+print('b. Conajmniej jedna cyfra')
 print('c. Conajmniej jedna wielka litera')
 print('d. Conajmniej jeden znak specjalny np. - @ #')
 print('e. Minimalna długość hasła 8 znaków')
@@ -29,16 +29,16 @@ while True:
         print("hasło za długie - Maksymalna długość hasła 64 znaki")
     if not re.search("[a-z]", password):
         flag = -1
-        print("Hasło nie zawiera coanjmiej jednej małej litery")
+        print("Hasło nie zawiera conajmniej jednej małej litery")
     if not re.search("[A-Z]", password):
         flag = -1
-        print("Hasło nie zawiera coanjmiej jednej wielkiej litery")
+        print("Hasło nie zawiera conajmniej jednej wielkiej litery")
     if not re.search("[0-9]", password):
         flag = -1
-        print("Hasło nie zawiera coanjmiej jednej cyfry")
-    if not re.search("[-@#]", password): #czy jest jakaś funkcja na znaki specjlane? coś jak ifalpha?
+        print("Hasło nie zawiera conajmniej jednej cyfry")
+    if not re.search("[-@#]", password):  # czy jest jakaś funkcja na znaki specjlane? coś jak ifalpha?
         flag = -1
-        print("Hasło nie zawiera znaku specjlanego")
+        print("Hasło nie zawiera znaku specjalnego")
         break
     else:
         flag = 0
