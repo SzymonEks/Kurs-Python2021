@@ -36,7 +36,7 @@ while True:
     if not re.search("[0-9]", password):
         flag = -1
         print("Hasło nie zawiera coanjmiej jednej cyfry")
-    if not re.search("[-@#]", password):
+    if not re.search("[-@#]", password): #czy jest jakaś funkcja na znaki specjlane? coś jak ifalpha?
         flag = -1
         print("Hasło nie zawiera znaku specjlanego")
         break
