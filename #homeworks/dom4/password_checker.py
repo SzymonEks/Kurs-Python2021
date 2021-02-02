@@ -1,4 +1,5 @@
 import re
+import string
 
 # # Napisz program, który jako dane wejściowe przyjmuje hasło od użytkownika i sprawdza
 # poprawność hasła względem poniższym kryteriów:
@@ -35,12 +36,12 @@ if not re.search("[A-Z]", password):
 if not re.search("[0-9]", password):
     flag = -1
     print("Hasło nie zawiera conajmniej jednej cyfry")
-if not re.search("[-@#]", password):  # czy jest jakaś funkcja na znaki specjlane? coś jak ifalpha?
+if not re.search("[string.punctuation]", password):
     flag = -1
     print("Hasło nie zawiera znaku specjalnego")
+if flag < 0:
+    print("Hasło nie poprawne")
 else:
     flag = 0
     print("Hasło poprawne")
 
-if flag == -1:
-    print("Hasło nie poprawne")
