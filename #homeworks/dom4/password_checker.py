@@ -37,8 +37,7 @@ if not re.search("[A-Z]", password):
 if not re.search("[0-9]", password):
     flag = -1
     print("Hasło nie zawiera conajmniej jednej cyfry")
-if not re.search('['+string.punctuation+']', password): # nie wiem jak to napisać zeby 'string.punctuation' był pattern
-#if not re.search("[!#$%&'()*+,-./:;<=>?@^_`{|}~]", password):   #nie wiem jak dodać wszyskie znaki do listy - np. [] '' "" ()
+if not re.search('['+string.punctuation+']', password):
     flag = -1
     print("Hasło nie zawiera znaku specjalnego")
 if flag < 0:
