@@ -1,7 +1,6 @@
 import re
 import string
 
-
 # # Napisz program, który jako dane wejściowe przyjmuje hasło od użytkownika i sprawdza
 # poprawność hasła względem poniższym kryteriów:
 # a. Conajmniej jedna mała litera
