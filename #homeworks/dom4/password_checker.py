@@ -43,5 +43,5 @@ if flag < 0:
     print("Hasło nie poprawne")
 else:
     flag = 0
-    print("Hasło poprawne")
+    print("Hasło poprawne") # co dopisać żeby w tym miejscu program cofnął sie do linii 14??
 
