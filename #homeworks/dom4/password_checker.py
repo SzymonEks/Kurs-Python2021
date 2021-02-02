@@ -37,13 +37,13 @@ if not re.search("[A-Z]", password):
 if not re.search("[0-9]", password):
     flag = -1
     print("Hasło nie zawiera conajmniej jednej cyfry")
-# if not re.search(string.punctuation, password): # nie wiem jak to napisać zeby 'string.punctuation' był pattern
-if not re.search("[!#$%&'()*+,-./:;<=>?@^_`{|}~]", password):   #nie wiem jak dodać wszyskie znaki do listy - np. [] '' "" ()
+if not re.search('['+string.punctuation+']', password): # nie wiem jak to napisać zeby 'string.punctuation' był pattern
+#if not re.search("[!#$%&'()*+,-./:;<=>?@^_`{|}~]", password):   #nie wiem jak dodać wszyskie znaki do listy - np. [] '' "" ()
     flag = -1
     print("Hasło nie zawiera znaku specjalnego")
 if flag < 0:
-    print("Hasło nie poprawne")
+    print("Hasło niepoprawne") # co dopisać żeby w tym miejscu program cofnął sie do linii 14??
 else:
     flag = 0
-    print("Hasło poprawne") # co dopisać żeby w tym miejscu program cofnął sie do linii 14??
+    print("Hasło poprawne")
 
