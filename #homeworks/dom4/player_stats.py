@@ -16,12 +16,13 @@ with open('players.csv', 'r') as f:
                 'points': line['points'],
             }
         )
+        print(players)
 # a. Top 3 graczy wg największej ilości zdobytych punktów
-        a = collections.Counter(players['name'])
-        print(a)
+#         a = collections.Counter(players['name'])
+#         print(a)
 # b. Średnia wieku graczy
 # c. Najczęściej występujące imię wśród graczy
-
+        c = collections.Counter(players['name'])
 # d. Średnia ilość punktów
 # e. Maksymalna ilość punktów
 # f. Minimalna ilość punktów
