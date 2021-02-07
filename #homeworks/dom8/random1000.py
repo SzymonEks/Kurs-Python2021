@@ -5,8 +5,6 @@
 # c. Liczby znajdujące się tylko w drugiej liście.
 # d. Liczbę wystąpień każdej z liczby w obydwu listach i wyświetl top 3 najczęściej występujące w każdej z nich.
 # e. Obydwie listy posortowane rosnąco i malejąco.
-
-
 import random
 import collections
 
