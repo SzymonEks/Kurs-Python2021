@@ -9,12 +9,12 @@ import random
 import collections
 
 random_list_1 = []
-for i in range(0,100):
+for i in range(0,1000):
     n = random.randint(0,1000)
     random_list_1.append(n)
 
 random_list_2 = []
-for i in range(0,100):
+for i in range(0,1000):
     n = random.randint(0,1000)
     random_list_2.append(n)
 
