@@ -11,7 +11,7 @@ def encrypt(text, s):
 
 
 text = input("podaj słowo do zaszyfrowania ")
-s = 4
+s = 3
 print("Tekst : " + text)
 print("przesunięcie : " + str(s))
 print("Szyfr: " + encrypt(text, s))
