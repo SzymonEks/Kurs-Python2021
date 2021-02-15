@@ -2,7 +2,7 @@
 # Możliwość utworzenia nowego konta, które przechowuje informacje dotyczące klienta, stanu konta, oraz waluty w jakiej przechowywane są środki.
 # Wpłaty środków.
 # Wypłaty środków.
-# Ustalanie limitów wypłat.
+# Ustalanie limitów wypłat. ?Nie wiem od czego zacząć?
 # Przelew z konta A na konto B.
 # Dodatkowo dla chętnych: historia tranzakcji tj. wpłaty, wypłaty, przelewy przychodzące i wychodzące w formie raportu do pliku lub podsumowania na ekranie
 
@@ -34,7 +34,7 @@ class Bank_system:
             if id_no == Bank_account.id_no:
                 Bank_account.balance = Bank_account.balance + amount
 
-    def withdrawal(self, id_no, amount):
+    def withdraw(self, id_no, amount):
         for Bank_account in self.account_list:
             if id_no == Bank_account.id_no:
                 if Bank_account.balance >= amount:
@@ -42,10 +42,10 @@ class Bank_system:
                 else:
                     print('Za mało środków na koncie')
 
-    def transfer(self, id_no_from, id_no_to, amount):
+    def transfer(self, id_no_from, id_no_to, amount): # Czy mozna
         for Bank_account in self.account_list:
             if id_no_from == Bank_account.id_no and Bank_account.balance >= amount:
-               print('ok')  # dodane roboczo
+               # print('ok')  # dodane roboczo
                 # Bank_account.balance = Bank_account.balance - amount
                 # if id_no_to == Bank_account.id_no:
                 #     Bank_account.balance = Bank_account.balance + amount
@@ -68,8 +68,8 @@ if __name__ == '__main__':
     bank_system_of_mybank.deposit ('111', 100)
     bank_system_of_mybank.display_all()
 # Wypłaty środków.
-    bank_system_of_mybank.withdrawal('333', 5001)
-    bank_system_of_mybank.withdrawal('333', 4999)
+    bank_system_of_mybank.withdraw('333', 5001)
+    bank_system_of_mybank.withdraw('333', 4999)
     bank_system_of_mybank.display_all()
 # # Ustalanie limitów wypłat. ????
 # ?????
