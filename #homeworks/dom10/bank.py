@@ -6,7 +6,7 @@
 # Przelew z konta A na konto B.
 # Dodatkowo dla chętnych: historia tranzakcji tj. wpłaty, wypłaty, przelewy przychodzące i wychodzące w formie raportu do pliku lub podsumowania na ekranie
 
-class Bank_account:
+class BankAccount:
     def __init__(self, client_firstname, client_lastname, account_id_no, account_balance, account_currency):
         self.firstname = client_firstname
         self.lastname = client_lastname
@@ -18,7 +18,7 @@ class Bank_account:
         return f'{self.firstname} {self.lastname} {self.id_no} {self.balance} {self.currency}'
 
 
-class Bank_system:
+class BankSystem:
     def __init__(self):
         self.account_list = []
 
@@ -42,7 +42,7 @@ class Bank_system:
                 else:
                     print('Za mało środków na koncie')
 
-    def transfer(self, id_no_from, id_no_to, amount): # Czy mozna
+    def transfer(self, id_no_from, Bank_account, amount): # Czy mozna
         for Bank_account in self.account_list:
             if id_no_from == Bank_account.id_no and Bank_account.balance >= amount:
                # print('ok')  # dodane roboczo
@@ -53,12 +53,12 @@ class Bank_system:
                 print('Konto z jakiego chcesz przelać środki nie istnieje lub ma za mało środków')
 
 if __name__ == '__main__':
-    client_1 = Bank_account('Adam', 'Małysz', '111', 10000, 'PLN')
-    client_2 = Bank_account('Janusz', 'Wajs', '222', 50000, 'PLN')
-    client_3 = Bank_account('Robert', 'Kubica', '333', 5000, 'PLN')
-    client_4 = Bank_account('Michał', 'Bajor', '444', 1000000, 'PLN')
+    client_1 = BankAccount('Adam', 'Małysz', '111', 10000, 'PLN')
+    client_2 = BankAccount('Janusz', 'Wajs', '222', 50000, 'PLN')
+    client_3 = BankAccount('Robert', 'Kubica', '333', 5000, 'PLN')
+    client_4 = BankAccount('Michał', 'Bajor', '444', 1000000, 'PLN')
 
-    bank_system_of_mybank = Bank_system()
+    bank_system_of_mybank = BankSystem()
     bank_system_of_mybank.add_account(client_1)
     bank_system_of_mybank.add_account(client_2)
     bank_system_of_mybank.add_account(client_3)
