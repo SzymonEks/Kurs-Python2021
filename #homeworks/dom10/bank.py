@@ -29,10 +29,9 @@ class BankSystem:
         for Bank_account in self.account_list:
             print(Bank_account)
 
-    def deposit (self, id_no, amount):
-        for Bank_account in self.account_list:
-            if id_no == Bank_account.id_no:
-                Bank_account.balance = Bank_account.balance + amount
+    def deposit (self, to_account, amount):
+        to_account.balance = to_account.balance + amount
+
 
     def withdraw(self, id_no, amount):
         for Bank_account in self.account_list:
@@ -42,15 +41,21 @@ class BankSystem:
                 else:
                     print('Za mało środków na koncie')
 
-    def transfer(self, id_no_from, id_no_to, amount):
-        for bank_account in self.account_list:
-            if id_no_from == bank_account.id_no and bank_account.balance >= amount:
-                bank_account.balance = bank_account.balance - amount
-                if id_no_to == bank_account.id_no:
-                    bank_account.balance = bank_account.balance + amount
-                else: print('Konto na jakie chcesz przedlać nie istnieje')
-            else:
-                print('Konto z jakiego chcesz przelać środki nie istnieje lub ma za mało środków')
+    # def transfer(self, id_no_from, id_no_to, amount):
+    #     for bank_account in self.account_list:
+    #         if id_no_from == bank_account.id_no and bank_account.balance >= amount:
+    #             bank_account.balance = bank_account.balance - amount
+    #             if id_no_to == bank_account.id_no:
+    #                 bank_account.balance = bank_account.balance + amount
+    #             else: print('Konto na jakie chcesz przedlać nie istnieje')
+    #         else:
+    #             print('Konto z jakiego chcesz przelać środki nie istnieje lub ma za mało środków')
+
+    def transfer(self, from_account, to_account, amount):
+        from_account.balance = from_account.balance - amount
+        to_account.balance = to_account.balance + amount
+
+
 
 
 if __name__ == '__main__':
@@ -71,11 +76,11 @@ if __name__ == '__main__':
 # # Wypłaty środków.
 #     bank_system_of_mybank.withdraw('333', 5001)
 #     bank_system_of_mybank.withdraw('333', 4999)
-#     bank_system_of_mybank.display_all()
+#     bank_system_of_mybank.display_all()tak
 # # # Ustalanie limitów wypłat. ????
 # # ?????
 # Przelew z konta A na konto B.
-    bank_system_of_mybank.transfer('222', '444', 10)
+    bank_system_of_mybank.transfer(client_2, client_4, 10)
     bank_system_of_mybank.display_all()
 
 
