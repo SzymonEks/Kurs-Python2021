@@ -42,15 +42,16 @@ class BankSystem:
                 else:
                     print('Za mało środków na koncie')
 
-    def transfer(self, id_no_from, Bank_account, amount): # Czy mozna
-        for Bank_account in self.account_list:
-            if id_no_from == Bank_account.id_no and Bank_account.balance >= amount:
-               # print('ok')  # dodane roboczo
-                # Bank_account.balance = Bank_account.balance - amount
-                # if id_no_to == Bank_account.id_no:
-                #     Bank_account.balance = Bank_account.balance + amount
+    def transfer(self, id_no_from, id_no_to, amount):
+        for bank_account in self.account_list:
+            if id_no_from == bank_account.id_no and bank_account.balance >= amount:
+                bank_account.balance = bank_account.balance - amount
+                if id_no_to == bank_account.id_no:
+                    bank_account.balance = bank_account.balance + amount
+                else: print('Konto na jakie chcesz przedlać nie istnieje')
             else:
                 print('Konto z jakiego chcesz przelać środki nie istnieje lub ma za mało środków')
+
 
 if __name__ == '__main__':
     client_1 = BankAccount('Adam', 'Małysz', '111', 10000, 'PLN')
@@ -63,16 +64,16 @@ if __name__ == '__main__':
     bank_system_of_mybank.add_account(client_2)
     bank_system_of_mybank.add_account(client_3)
     bank_system_of_mybank.add_account(client_4)
-    bank_system_of_mybank.display_all()
-# Wpłaty środków.
-    bank_system_of_mybank.deposit ('111', 100)
-    bank_system_of_mybank.display_all()
-# Wypłaty środków.
-    bank_system_of_mybank.withdraw('333', 5001)
-    bank_system_of_mybank.withdraw('333', 4999)
-    bank_system_of_mybank.display_all()
-# # Ustalanie limitów wypłat. ????
-# ?????
+#     bank_system_of_mybank.display_all()
+# # Wpłaty środków.
+#     bank_system_of_mybank.deposit ('111', 100)
+#     bank_system_of_mybank.display_all()
+# # Wypłaty środków.
+#     bank_system_of_mybank.withdraw('333', 5001)
+#     bank_system_of_mybank.withdraw('333', 4999)
+#     bank_system_of_mybank.display_all()
+# # # Ustalanie limitów wypłat. ????
+# # ?????
 # Przelew z konta A na konto B.
     bank_system_of_mybank.transfer('222', '444', 10)
     bank_system_of_mybank.display_all()
