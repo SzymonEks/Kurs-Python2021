@@ -3,6 +3,7 @@
 # Wyświetlenie TOP 10 graczy.
 # Wyświetlenie średniej ilości zdobytych punktów.
 # Możliwość sortowania wyników rosnąco i malejąco.
+import csv
 
 class Player:
     def __init__(self, ID, name, score, age):
@@ -26,11 +27,11 @@ class PlayersRanking:
         with open(filename, 'r') as players_file:
             reader = csv.DictReader(players_file, delimiter=delimiter)
             for player_data in reader:
-                contact = Person(
+                player = Player(
                     player_data['ID'],
-                    player_data['Name'],
-                    player_data['Score'],
-                    player_data['wiek'],
+                    player_data['name'],
+                    player_data['score'],
+                    player_data['age'],
                 )
                 self.add_player(player)
 
@@ -38,10 +39,17 @@ class PlayersRanking:
         for player in self.ranking:
             print(player)
 
+    def sort(self, reverse=False):
+        self.ranking.sort(key=lambda player: player.score, reverse=True)
+
+
 
 if __name__ == '__main__':
 
     Ranking = PlayersRanking()
-    Ranking.from_csv('#homeworks/dom10/players.csv')
+    Ranking.from_csv('players.csv')
+    Ranking.sort()
     Ranking.display_all()
+
+
 
