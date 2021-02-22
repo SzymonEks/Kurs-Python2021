@@ -6,6 +6,10 @@
 # Ustalanie limitów wypłat. ?Nie wiem od czego zacząć?
 # Przelew z konta A na konto B.
 # Dodatkowo dla chętnych: historia tranzakcji tj. wpłaty, wypłaty, przelewy przychodzące i wychodzące w formie raportu do pliku lub podsumowania na ekranie
+# ++ dodatkowe zadania ++
+# Rozwiń program z poprzedniej pracy domowej dot. kont bankowych dodając funkcjonalności:
+# obsługi kont oszczędnościowych, które to dodatkowo przechowują informacje dot. oprocentowania i umozliwiają naliczenie odsetek
+# promocyjnych kont oczędnościowych z wyższym oprocentowaniem ale pobierające prowizję od wypłat
 
 class BankAccount:
     def __init__(self, client_firstname, client_lastname, account_id_no, account_balance, account_currency, account_withdraw_limit):
