@@ -69,16 +69,16 @@ if __name__ == '__main__':
     bank_system_of_mybank.add_account(client_2)
     bank_system_of_mybank.add_account(client_3)
     bank_system_of_mybank.add_account(client_4)
-#     bank_system_of_mybank.display_all()
-# # Wpłaty środków.
-#     bank_system_of_mybank.deposit ('111', 100)
-#     bank_system_of_mybank.display_all()
-# # Wypłaty środków.
-#     bank_system_of_mybank.withdraw('333', 5001)
-#     bank_system_of_mybank.withdraw('333', 4999)
-#     bank_system_of_mybank.display_all()tak
-# # # Ustalanie limitów wypłat. ????
-# # ?????
+    bank_system_of_mybank.display_all()
+# Wpłaty środków.
+    bank_system_of_mybank.deposit ('111', 100)
+    bank_system_of_mybank.display_all()
+# Wypłaty środków.
+    bank_system_of_mybank.withdraw('333', 5001)
+    bank_system_of_mybank.withdraw('333', 4999)
+    bank_system_of_mybank.display_all()
+# # Ustalanie limitów wypłat. ????
+# ?????
 # Przelew z konta A na konto B.
     bank_system_of_mybank.transfer(client_2, client_4, 10)
     bank_system_of_mybank.display_all()

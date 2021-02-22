@@ -18,10 +18,10 @@ class Player:
 class PlayersRanking:
 
     def __init__(self):
-        self.ranking = []
+        self.ranking_list = []
 
     def add_player(self, player):
-        self.ranking.append(player)
+        self.ranking_list.append(player)
 
     def from_csv(self, filename, delimiter=','):
         with open(filename, 'r') as players_file:
@@ -36,11 +36,11 @@ class PlayersRanking:
                 self.add_player(player)
 
     def display_all(self):
-        for player in self.ranking:
+        for player in self.ranking_list:
             print(player)
 
-    def sort(self, reverse=False):
-        self.ranking.sort(key=lambda player: player.score, reverse=True)
+    def sort(self, reverse=True):
+        self.ranking_list.sort(key=lambda player: player.score, reverse=reverse)
 
 
 
@@ -50,6 +50,9 @@ if __name__ == '__main__':
     Ranking.from_csv('players.csv')
     Ranking.sort()
     Ranking.display_all()
-
+    # Top10 = Ranking.ranking_list[:9]
+    print('*'*100)
+    Ranking.sort(reverse=False)
+    Ranking.display_all()
 
 
