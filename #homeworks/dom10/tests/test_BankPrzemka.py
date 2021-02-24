@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from BankPrzemka import PromoSavingsAccount, BankSystem
+from BankPrzemka import PromoSavingsAccount, BankSystem, SavingsAccount, BankAccount
 
 
 class AccountTestCase(TestCase):
