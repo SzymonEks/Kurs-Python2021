@@ -1,9 +1,9 @@
 from unittest import TestCase
 
-from BankPrzemka import BankAccount, PromoSavingsAccount, SavingsAccount, BankSystem
+from BankPrzemka import PromoSavingsAccount, BankSystem
 
 
-class AccountTestCase(TestCase)
+class AccountTestCase(TestCase):
     def setUp(self):
         self.client_1 = BankAccount('Adam', 'Małysz', '111', 10000, 'PLN',1000)
         self.client_2 = BankAccount('Janusz', 'Wajs', '222', 50000, 'PLN',1000)
@@ -14,7 +14,7 @@ class AccountTestCase(TestCase)
         balance_before = self.client_1.balance
         to_deposit = 100
 
-        self.client_1.deposit('111', to_deposit)
+        self.BankSystem.deposit('111', to_deposit)
 
         expected = balance_before + to_deposit
         self.assertEqual(expected, self.client_1.balance)
