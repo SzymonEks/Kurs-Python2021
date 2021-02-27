@@ -56,6 +56,6 @@ class AccountTestCase(TestCase):
         id = self.client_1.id_no
         amount = 50000
 
-        self.bank_system.withdraw(id, amount)
+        expected = self.bank_system.withdraw(id, amount)
 
-        self.assertRaises('Za mało środków na koncie')
+        self.assertEqual(expected, 'Za mało środków na koncie')
