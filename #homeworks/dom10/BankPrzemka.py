@@ -65,9 +65,9 @@ class BankSystem:
             if amount < bank_account.withdraw_limit:
                 bank_account.balance = bank_account.balance - amount
             else:
-                print('Wypłata powyżej limitu')
+                return('Wypłata powyżej limitu')
         else:
-            print('Za mało środków na koncie')
+            return('Za mało środków na koncie')
 
     def promo_withdrawal(self, id_no, amount):
         bank_account = self.accounts[id_no]
@@ -75,9 +75,9 @@ class BankSystem:
             if amount < bank_account.withdraw_limit:
                 bank_account.balance = bank_account.balance - amount - bank_account.withdrawal_commission
             else:
-                print('Wypłata powyżej limitu')
+                return('Wypłata powyżej limitu')
         else:
-            print('Za mało środków na koncie')
+            return('Za mało środków na koncie')
 
 
     def transfer(self, id_no_from, id_no_to, amount):
@@ -87,7 +87,7 @@ class BankSystem:
             from_account.balance = from_account.balance - amount
             to_account.balance = to_account.balance + amount
         else:
-            print('Za mało środków na koncie')
+            return('Za mało środków na koncie')
 
     def accrual_of_interest(self, id_no):
         bank_account = self.accounts[id_no]
